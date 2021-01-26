@@ -75,7 +75,7 @@ class Colors(object):
 
     def __getattr__(self,key):
         if key not in CCODES.keys():
-            raise (AttributeError, "Colors object has no attribute '%s'" % key)
+            raise AttributeError( "Colors object has no attribute '%s'" % key)
         else:
             if self.disabled:
                 return lambda x: x
